@@ -24,6 +24,9 @@ Installation
     git clone git://github.com/iyshannon/pocket2pinboard.git
     cd pocket2pinboard
     bundle install
+    cp config.yml.example config.yml
+
+Add your [Pinboard API token](https://pinboard.in/settings/password) to `config.yml`.
 
 Usage
 =====
@@ -33,6 +36,13 @@ file in the `pocket2pinboard` folder.
     ruby p2pb.rb input.html > output.html
 
 Replace `input.html` with the name of your bookmark file.
+
+Adding tags
+-----------
+
+You can configure a set of tags to be added to all uploaded bookmarks by adding strings to the `defaulttags` key in `config.yml`, like:
+
+    defaulttags: ['imported', 'frompocket']
 
 MIT Open Source License
 =======================
